@@ -2,20 +2,19 @@
 import express from 'express'
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
+import { preloadData } from 'hyperactiv/src/react'
 
 import { Root } from '~/shared/components/Root'
 import { initStore } from '~/shared/tools'
 
-import { preloadData } from './preloadData'
 import manifest from '../../dist/client/parcel-manifest.json'
 import pageTemplate from './templates/index.html'
 
 async function renderPage ({ url }) {
   let store = initStore()
-  const promises = []
-  const jsx = <Root pathname={ url } store={ store } promises={ promises } />
+  const jsx = <Root pathname={ url } store={ store }  />
   try {
-    await preloadData(jsx, promises)
+    await preloadData(jsx)
   } catch(error) {
     /* bad */
     console.error(error)

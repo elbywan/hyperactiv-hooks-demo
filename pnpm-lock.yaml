@@ -1,7 +1,7 @@
 dependencies:
   compression: 1.7.4
   express: 4.17.1
-  hyperactiv: 'link:../../../../usr/local/pnpm-global/node_modules/hyperactiv'
+  hyperactiv: 0.6.0
   node-fetch: 2.6.0
   normaliz: 0.1.1
   react: 16.8.6
@@ -3733,6 +3733,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
+  /hyperactiv/0.6.0:
+    dev: false
+    resolution:
+      integrity: sha512-CcsIBxr28upQD4HsoTeSK4/ZfVOKCAs26rIYsPT1//MzGooegPOttBZmVAstf//b5A1y1L9SXwcP+G/+VpLYIA==
   /iconv-lite/0.4.24:
     dependencies:
       safer-buffer: 2.1.2
@@ -7362,7 +7366,7 @@ specifiers:
   eslint-plugin-react: ^7.13.0
   eslint-plugin-react-hooks: ^1.6.0
   express: ^4.17.1
-  hyperactiv: ^0.5.0
+  hyperactiv: ^0.6.0
   node-fetch: ^2.6.0
   nodemon: ^1.19.1
   normaliz: ^0.1.1
