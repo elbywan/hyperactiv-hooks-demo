@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 
-import { navigate, http, store } from '../../../tools'
+import { navigate, http } from '../../../tools'
+import { useStore } from 'hyperactiv/src/react'
 
-function createPost(data) {
+function createPost(store, data) {
     return (
         http
             .url('/posts')
@@ -15,11 +16,12 @@ function createPost(data) {
 }
 
 export function NewPost() {
+    const store = useStore()
     const [ title, setTitle ] = useState('')
     const [ body, setBody ] = useState('')
 
     async function createNewPost() {
-        const data = await createPost({ title, body, userId: 10 })
+        const data = await createPost(store, { title, body, userId: 10 })
         navigate(`/posts/${data.id}`)
     }
 

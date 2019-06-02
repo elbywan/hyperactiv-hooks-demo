@@ -1,4 +1,4 @@
-import { store as createStore } from 'hyperactiv/src/react'
+import { store } from 'hyperactiv/src/react'
 import { WEB } from '../constants'
 
 export function initStore() {
@@ -8,5 +8,7 @@ export function initStore() {
     }
 }
 
-export const store = createStore(WEB && window.__STORE__ || initStore())
+export function createStore() {
+    return store(WEB && window.__STORE__ || initStore())
+}
 

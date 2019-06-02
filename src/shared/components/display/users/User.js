@@ -3,9 +3,8 @@ import { watch } from 'hyperactiv/src/react'
 
 import { Loader } from '../../core'
 import { useUser, useUserPosts } from '../../fetch'
-import { store } from '../../../tools'
 
-export const User = memo(watch(function User({ id }) {
+export const User = memo(watch(function User({ id, store }) {
     const {
         data: user,
         loading,

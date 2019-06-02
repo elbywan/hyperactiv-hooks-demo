@@ -12,7 +12,7 @@
     "watch:client": "parcel watch src/client/index.html -d dist/client",
     "watch:server": "parcel watch src/server/index.js --target node --bundle-node-modules -d dist/server",
     "serve": "node --preserve-symlinks dist/server/index.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run watch:client\" \"npm run watch:server\" \"nodemon --watch dist/server dist/server/index.js\"",
+    "dev": "npm run build:server && concurrently --kill-others-on-fail \"npm run watch:client\" \"npm run watch:server\" \"nodemon --watch dist/server dist/server/index.js\"",
     "prod": "npm run build && npm run serve",
     "lint": "eslint src",
     "start": "npm run serve"
