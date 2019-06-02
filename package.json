@@ -1,0 +1,42 @@
+{
+  "name": "hyperactiv-hooks-isomorphic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "parcel build src/client/index.html && parcel build src/server/index.js --target node",
+    "dev": "parcel serve src/client/index.html --port 5000",
+    "serve": "node --preserve-symlinks dist/index.js",
+    "lint": "eslint src",
+    "start": "npm run lint && npm run clean && npm run build && npm run serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "hyperactiv": "^0.5.0",
+    "node-fetch": "^2.6.0",
+    "normaliz": "^0.1.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.9.0",
+    "universal-router": "^8.2.0",
+    "wretch": "^1.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-bundle-manifest": "^0.2.0",
+    "posthtml-include": "^1.2.0",
+    "sass": "^1.20.3"
+  }
+}

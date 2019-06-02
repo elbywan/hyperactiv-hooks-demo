@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    position: relative;
+    height: 100vh;
+    color: #222;
+}
+
+#root {
+    height: 100%;
+}
+
+main {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h2.title {
+    color: white;
+    padding: 0.5em 1em;
+    margin: 0;
+    font-size: 3em;
+    background: #E91E63;
+}
+
+div.menu {
+    &>ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        padding: 1em;
+        background: #FFEB3B;
+        color: white;
+    }
+}
+
+a.link {
+    color: #333;
+}
+
+div.content {
+    padding: 1em;
+}

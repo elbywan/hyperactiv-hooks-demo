@@ -1,0 +1,40 @@
+{
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "sourceType": "module",
+      "allowImportExportEverywhere": false,
+      "codeFrame": true
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "react",
+        "react-hooks"
+    ],
+    "rules": {
+        "no-console": "warn",
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "react/prop-types": "off",
+        "react/display-name": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
+    }
+}

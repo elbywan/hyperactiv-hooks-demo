@@ -1,0 +1,19 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "useBuiltIns": "entry",
+                "targets": {
+                    "browsers": "> 1%, not dead"
+                }
+            }
+        ], "@babel/preset-react"],
+    "plugins": [
+        ["module-resolver", {
+            "alias": {
+              "~": "./src"
+            }
+        }]
+    ]
+}
