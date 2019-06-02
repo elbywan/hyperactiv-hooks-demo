@@ -1,4 +1,4 @@
-const head = require('../../shared/templates/head.html')
+import head from '../../shared/templates/head.html'
 
 export default ({ css = '', js = '', store = '', reactHtml = '' }) => `
 <!DOCTYPE html>

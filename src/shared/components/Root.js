@@ -1,6 +1,6 @@
 import React from 'react'
 import fetch from 'node-fetch'
-import { HyperactivProvider } from 'hyperactiv/react'
+import { HyperactivProvider } from 'hyperactiv/src/react'
 
 import { WEB } from '~/shared/constants'
 import { http } from '~/shared/tools'

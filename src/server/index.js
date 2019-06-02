@@ -7,7 +7,7 @@ import { Root } from '~/shared/components/Root'
 import { initStore } from '~/shared/tools'
 
 import { preloadData } from './preloadData'
-import manifest from '../../dist/parcel-manifest.json'
+import manifest from '../../dist/client/parcel-manifest.json'
 import pageTemplate from './templates/index.html'
 
 async function renderPage ({ url }) {
@@ -32,7 +32,7 @@ async function renderPage ({ url }) {
 
 const server = express()
 server.use(require('compression')())
-server.use('/public', express.static('./dist'))
+server.use('/public', express.static('./dist/client'))
 
 server.get('*', (req, res) => {
   if(req.url.endsWith('.map') || req.url.endsWith('.ico')) {

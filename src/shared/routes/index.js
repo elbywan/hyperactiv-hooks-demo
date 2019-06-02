@@ -12,6 +12,6 @@ export const routes = [
     { path: '/users/:id', action: ctx => <User id={ ctx.params.id }/> },
     { path: /.*/, action: () => {
         redirect('/posts')
-        return <Posts />
+        return ''
     } },
 ]

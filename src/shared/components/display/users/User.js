@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { watch } from 'hyperactiv/react'
+import { watch } from 'hyperactiv/src/react'
 
 import { Loader } from '../../core'
 import { useUser, useUserPosts } from '../../fetch'

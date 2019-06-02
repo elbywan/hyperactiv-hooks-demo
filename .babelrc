@@ -3,16 +3,14 @@
         [
             "@babel/preset-env",
             {
-                "useBuiltIns": "entry",
-                "targets": {
-                    "browsers": "> 1%, not dead"
-                }
+                "useBuiltIns": "entry"
             }
         ], "@babel/preset-react"],
     "plugins": [
         ["module-resolver", {
             "alias": {
-              "~": "./src"
+              "~": "./src",
+              "react-dom": "@hot-loader/react-dom"
             }
         }]
     ]

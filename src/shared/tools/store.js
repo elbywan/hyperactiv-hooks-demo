@@ -1,4 +1,4 @@
-import { store as createStore } from 'hyperactiv/react'
+import { store as createStore } from 'hyperactiv/src/react'
 import { WEB } from '../constants'
 
 export function initStore() {

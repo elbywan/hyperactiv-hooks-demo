@@ -1,4 +1,4 @@
-import { useResource } from 'hyperactiv/react'
+import { useResource } from 'hyperactiv/src/react'
 
 import { store, http } from '../../../tools'
 
