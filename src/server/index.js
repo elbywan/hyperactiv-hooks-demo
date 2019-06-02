@@ -22,8 +22,8 @@ async function renderPage ({ url }) {
 
   const reactHtml = ReactDOMServer.renderToString(jsx)
   return pageTemplate({
-    css: '/public' + manifest['style/index.scss'],
-    js: '/public' + manifest['index.js'],
+    css:  manifest['style/index.scss'],
+    js: manifest['index.js'],
     reactHtml,
     store
   })
@@ -31,7 +31,7 @@ async function renderPage ({ url }) {
 
 const server = express()
 server.use(require('compression')())
-server.use('/public', express.static('./dist/client'))
+server.use('/public/client', express.static('./dist/client'))
 
 server.get('*', (req, res) => {
   if(req.url.endsWith('.map') || req.url.endsWith('.ico')) {
