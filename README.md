@@ -2,6 +2,10 @@
 
 ## Client + Server demo with SSR
 
+### [📸 Demo](https://hyperactiv-hooks-demo.herokuapp.com/posts)
+
+Hosted demo, with SSR and caching using [hyperactiv/react](https://github.com/elbywan/hyperactiv/tree/master/src/react).
+
 ### 1 - Clone
 
 `git clone https://github.com/elbywan/hyperactiv-hooks-demo`
@@ -24,3 +28,14 @@
 
 *Prod mode, Lints, then builds, then starts the node.js backend that serves optimized HTML & JS using SSR on `http://localhost:5001`*
 
+### 4 - Play with the console
+
+```js
+// The store is bound to window.__STORE__
+// You can toy with it to see how it reflects in the components re-rendering.
+
+// Examples:
+__STORE__.posts[2] = {"userId":1,"id":2,"title":"Lorem ipsum","body":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
+__STORE__.posts[1].title = "Hello"
+delete __STORE__.__requests__['get@https://jsonplaceholder.typicode.com/posts?_page=1&_limit=20']
+```
