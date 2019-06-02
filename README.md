@@ -22,11 +22,11 @@ Hosted demo, with SSR and caching using [hyperactiv/react](https://github.com/el
 
 - `npm run build`
 
-*Lints + builds client & server`*.
+*Lint & Build the sources*.
 
 - `npm run prod`
 
-*Prod mode, Lints, then builds, then starts the node.js backend that serves optimized HTML & JS using SSR on `http://localhost:5001`*
+*Prod mode, builds then starts the node.js backend that serves optimized HTML & JS using SSR on `http://localhost:5001`*
 
 ### 4 - Play with the console
 
