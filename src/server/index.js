@@ -42,6 +42,7 @@ server.get('*', (req, res) => {
   })
 })
 
-server.listen(5001, '0.0.0.0', () => {
-  console.log('Server listening @ http://0.0.0.0/5001')
+const port = process.env.PORT || 5001
+server.listen(port, '0.0.0.0', () => {
+  console.log(`Server listening @ http://0.0.0.0/${port}`)
 })

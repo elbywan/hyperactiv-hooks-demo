@@ -16,6 +16,11 @@
 
 *Dev mode, served by node.js on `http://localhost:5001`, with SSR and hot reload.*
 
-- `npm start`
+- `npm run build`
 
-*Lints + builds + starts the node.js backend that serves optimized HTML & JS using SSR on `http://localhost:5001`*.
+*Lints + builds client & server`*.
+
+- `npm run prod`
+
+*Prod mode, Lints, then builds, then starts the node.js backend that serves optimized HTML & JS using SSR on `http://localhost:5001`*
+
