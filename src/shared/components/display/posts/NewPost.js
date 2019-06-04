@@ -3,13 +3,20 @@ import React, { useState } from 'react'
 import { navigate, http } from '../../../tools'
 import { useStore } from 'hyperactiv/src/react'
 
-function createPost(store, data) {
+function createPost(store, payload) {
     return (
         http
             .url('/posts')
-            .post(data)
+            .post(payload)
             .json(data => {
                 store.posts[data.id] = data
+                const userId = payload.userId
+                if(userId && store.users[userId]) {
+                    if(store.users[userId].posts)
+                        store.users[userId].posts.push(data.id)
+                    else
+                        store.users[userId].posts = [data.id]
+                }
                 return data
             })
     )
