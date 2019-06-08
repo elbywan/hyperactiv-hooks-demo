@@ -23,7 +23,13 @@ async function renderPage ({ url }) {
   const reactHtml = ReactDOMServer.renderToString(jsx)
   return pageTemplate({
     css:  manifest['style/index.scss'],
-    js: manifest['index.js'],
+    js: Object.entries(manifest).filter(([ key ]) => key.endsWith('.js')).map(([, src ]) => {
+      if(src.endsWith('.js.map')) {
+        return src.substring(0, src.length - 4)
+      } else {
+        return src
+      }
+    }),
     reactHtml,
     store
   })

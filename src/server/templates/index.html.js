@@ -9,7 +9,7 @@ export default ({ css = '', js = '', store = '', reactHtml = '' }) => `
     <script>
           window.__STORE__ = ${JSON.stringify(store)}
     </script>
-    <script src="${js}" defer></script>
+    ${js.map(src => `<script src="${src}" defer></script>`)}
 </head>
 <body>
     <div id="root">
