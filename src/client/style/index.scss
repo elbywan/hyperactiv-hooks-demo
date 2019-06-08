@@ -11,35 +11,29 @@ body {
     height: 100%;
 }
 
-main {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-h2.title {
-    color: white;
-    padding: 0.5em 1em;
-    margin: 0;
-    font-size: 3em;
-    background: #E91E63;
-}
-
-div.menu {
-    &>ul {
-        list-style: none;
-        padding: 0;
+header {
+    h2.title {
+        color: white;
+        padding: 0.5em 1em;
         margin: 0;
+        font-size: 3em;
+        background: #E91E63;
+    }
+    .subtitle {
         padding: 1em;
+        font-size: 1.3em;
         background: #FFEB3B;
         color: white;
     }
 }
 
-a.link {
-    color: #333;
+main {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
 }
 
-div.content {
-    padding: 1em;
+a.link {
+    color: #333;
 }

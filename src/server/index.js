@@ -22,14 +22,18 @@ async function renderPage ({ url }) {
 
   const reactHtml = ReactDOMServer.renderToString(jsx)
   return pageTemplate({
-    css:  manifest['style/index.scss'],
-    js: Object.entries(manifest).filter(([ key ]) => key.endsWith('.js')).map(([, src ]) => {
-      if(src.endsWith('.js.map')) {
-        return src.substring(0, src.length - 4)
-      } else {
-        return src
-      }
-    }),
+    css:  Object.entries(manifest)
+      .filter(([ key ]) => key.endsWith('.scss'))
+      .map(([, src ]) => src),
+    js: Object.entries(manifest)
+      .filter(([ key ]) => key.endsWith('.js'))
+      .map(([, src ]) => {
+        if(src.endsWith('.js.map')) {
+          return src.substring(0, src.length - 4)
+        } else {
+          return src
+        }
+      }),
     reactHtml,
     store
   })

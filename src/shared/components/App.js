@@ -24,18 +24,16 @@ export function App({ pathname: providedPathname }) {
       const resolvedComponent = router.resolve({ pathname })
 
       return (
-            <main>
-                <h2 className='title'>Hyperactiv hooks demo</h2>
-                <div className='menu'>
-                    <ul>
-                        <li>
-                            <Link href='/posts'>Posts</Link>
-                        </li>
-                    </ul>
-                </div>
-                <div className='content'>
+            <>
+                <header>
+                    <h2 className='title'>Hyperactiv hooks demo</h2>
+                    <div className='subtitle'>
+                        <Link href='/posts'>Posts</Link>
+                    </div>
+                </header>
+                <main className='content'>
                    { resolvedComponent }
-                </div>
-            </main>
+                </main>
+            </>
       )
 }
