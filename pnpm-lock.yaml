@@ -1,7 +1,7 @@
 dependencies:
   compression: 1.7.4
   express: 4.17.1
-  hyperactiv: 0.6.2
+  hyperactiv: 0.6.3
   node-fetch: 2.6.0
   normaliz: 0.1.1
   react: 16.8.6
@@ -3728,10 +3728,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
-  /hyperactiv/0.6.2:
+  /hyperactiv/0.6.3:
     dev: false
     resolution:
-      integrity: sha512-tmJf0bYmS6zpaRpPjIbtbijDfkUbPpUzOgLDZdJH/KsJuyPavrfTvOF+IR4orVTSuIxh6c5VKxvfGtwFxcwbPA==
+      integrity: sha512-ijIuhuEMyrtqN72z2ZK5FRvmNQkgioRV3RZKz4R1xfI+7OWTPNNkFk0beQmzB/GuuyS6XpoLBYpXUWoZnq/hcA==
   /iconv-lite/0.4.24:
     dependencies:
       safer-buffer: 2.1.2
@@ -7398,7 +7398,7 @@ specifiers:
   eslint-plugin-react: ^7.13.0
   eslint-plugin-react-hooks: ^1.6.0
   express: ^4.17.1
-  hyperactiv: ^0.6.0
+  hyperactiv: ^0.6.3
   node-fetch: ^2.6.0
   nodemon: ^1.19.1
   normaliz: ^0.1.1
