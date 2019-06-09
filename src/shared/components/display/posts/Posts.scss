@@ -1,0 +1,12 @@
+$dimmedYellow: #F6F0CF;
+
+.Posts {
+    &__buttons-bar {
+        background: $dimmedYellow;
+        margin: 0;
+        padding: 1em;
+        button {
+            margin-left: 1em;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+$red: #E91E63;
+$yellow: #FFEB3B;
+
+header {
+    text-align: center;
+
+    h2 {
+        color: white;
+        margin: 0;
+        font-size: 3em;
+        background: $red;
+        padding: 0.5em;
+    }
+
+    .github-link {
+        display: inline-block;
+        vertical-align: middle;
+        width: 1em;
+        transition: all 0.25s;
+        margin-left: 0.5em;
+
+        &:hover {
+            fill: white;
+        }
+    }
+}
+
+main {
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    @media (min-width: 950px) {
+        margin-top: 3em;
+    }
+    @media (max-width: 950px) {
+        padding: 0.5em;
+    }
+    .content {
+        @media (min-width: 950px) {
+            box-shadow: 4px 4px 8px #666;
+        }
+        background: white;
+    }
+    .heading {
+        padding: 1em;
+        font-size: 1.5em;
+        background: $yellow;
+        font-family: 'Raleway', sans-serif;
+    }
+    .view {
+        border: 3px solid $yellow;
+        @media (min-width: 950px) {
+            border-top: 0;
+        }
+        &__padded-content {
+            padding: 1em;
+        }
+    }
+}

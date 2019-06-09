@@ -1,39 +1,26 @@
+$red: #E91E63;
+$dimmedYellow: #F6F0CF;
+
 body {
     margin: 0;
     padding: 0;
     background: white;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     color: #222;
+    font-family: 'Montserrat', sans-serif;
+    @media (max-width: 700px) {
+        font-size: 0.9rem;
+    }
+    background-image: linear-gradient(45deg, $red 25%, $dimmedYellow 25%, $dimmedYellow 50%, $red 50%, $red 75%, $dimmedYellow 75%, $dimmedYellow 100%);
+    background-size: 56.57px 56.57px;
 }
 
 #root {
     height: 100%;
 }
 
-header {
-    h2.title {
-        color: white;
-        padding: 0.5em 1em;
-        margin: 0;
-        font-size: 3em;
-        background: #E91E63;
-    }
-    .subtitle {
-        padding: 1em;
-        font-size: 1.3em;
-        background: #FFEB3B;
-        color: white;
-    }
+h1,h2,h3,h4 {
+    font-family: 'Raleway', sans-serif;
 }
 
-main {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
-}
-
-a.link {
-    color: #333;
-}

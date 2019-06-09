@@ -1,0 +1,25 @@
+$red: #E91E63;
+$yellow: #FFEB3B;
+$dimmedYellow: #F6F0CF;
+
+button {
+    cursor: pointer;
+    background: white;
+    font-weight: normal;
+    border: 2px solid $yellow;
+    outline: 0;
+    padding: 0.5em;
+    min-width: 100px;
+    box-shadow: none;
+    text-align: center;
+    border-radius: 0.5em;
+    transition: 0.25s background;
+    font-weight: bold;
+    &:hover:not([disabled]) {
+      background: $yellow;
+    }
+    &[disabled] {
+      background: #EEE;
+      cursor: not-allowed;
+    }
+}

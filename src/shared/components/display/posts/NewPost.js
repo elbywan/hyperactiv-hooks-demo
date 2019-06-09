@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import { navigate, http } from '../../../tools'
 import { useStore } from 'hyperactiv/src/react'
+import { Input, TextArea, Button, Loader } from '../../core'
 
 function createPost(store, payload) {
     return (
@@ -26,36 +27,47 @@ export function NewPost() {
     const store = useStore()
     const [ title, setTitle ] = useState('')
     const [ body, setBody ] = useState('')
+    const [ creating, setCreating ] = useState(false)
+    const [ error, setError ] = useState(null)
 
     async function createNewPost() {
-        const data = await createPost(store, { title, body, userId: 10 })
-        navigate(`/posts/${data.id}`)
+        setCreating(true)
+        try {
+            const data = await createPost(store, { title, body, userId: 10 })
+            setError(null)
+            navigate(`/posts/${data.id}`)
+        } catch (error) {
+            setError(error)
+        }
+        setCreating(false)
     }
 
     return (
-        <div>
-            <div>
-                <span>Title : </span>
-                <input
-                    value={ title }
-                    onChange={ e => setTitle(e.target.value) }
-                />
-            </div>
-            <div>
-                <span>Body : </span>
-                <textarea
-                    value={ body }
-                    onChange={ e => setBody(e.target.value) }
-                />
-            </div>
-            <div>
-                <button
-                    disabled={!title || !body}
+        <div className='view__padded-content'>
+            <h3>Title</h3>
+            <Input
+                placeholder='Post title'
+                value={ title }
+                onChange={ e => setTitle(e.target.value) }
+            />
+            <h3>Body</h3>
+            <TextArea
+                placeholder='Post contents'
+                rows={10}
+                value={ body }
+                onChange={ e => setBody(e.target.value) }
+            />
+            <p>
+                 { error && <strong>Error: {error.message}</strong>}
+            </p>
+            <p>
+                <Button
+                    disabled={creating || !title || !body}
                     onClick={createNewPost}
                 >
-                    Create
-                </button>
-            </div>
+                    <Loader text='Creating post' icon={false} loading={creating}>Create</Loader>
+                </Button>
+            </p>
         </div>
     )
 }
