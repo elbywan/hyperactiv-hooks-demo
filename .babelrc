@@ -10,7 +10,8 @@
         ["module-resolver", {
             "alias": {
               "~": "./src",
-              "react-dom": "@hot-loader/react-dom"
+              "react-dom": "@hot-loader/react-dom",
+              "hyperactiv/src/react": "hyperactiv/react"
             }
         }]
     ]
