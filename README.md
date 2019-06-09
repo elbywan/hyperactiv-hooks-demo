@@ -28,7 +28,7 @@ Hosted demo, with SSR and caching using [hyperactiv/react](https://github.com/el
 
 *Prod mode, builds then starts the node.js backend that serves optimized HTML & JS using SSR on `http://localhost:5001`*
 
-### 4 - Play with the console
+### 4 - Play with the editable input fields, or the console
 
 ```js
 // The store is bound to window.__STORE__
