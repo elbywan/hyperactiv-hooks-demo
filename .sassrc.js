@@ -1,0 +1,1 @@
+module.exports = { data: '@import "./src/client/style/variables";' }

@@ -1,5 +1,3 @@
-$red: #E91E63;
-$yellow: #FFEB3B;
 
 header {
     text-align: center;
@@ -8,7 +6,7 @@ header {
         color: white;
         margin: 0;
         font-size: 3em;
-        background: $red;
+        background: $primary;
         padding: 0.5em;
     }
 
@@ -33,7 +31,7 @@ main {
         margin-top: 3em;
     }
     @media (max-width: 950px) {
-        padding: 0.5em;
+        padding: 5px;
     }
     .content {
         @media (min-width: 950px) {
@@ -44,11 +42,11 @@ main {
     .heading {
         padding: 1em;
         font-size: 1.5em;
-        background: $yellow;
+        background: $secondary;
         font-family: 'Raleway', sans-serif;
     }
     .view {
-        border: 3px solid $yellow;
+        border: 3px solid $secondary;
         @media (min-width: 950px) {
             border-top: 0;
         }
