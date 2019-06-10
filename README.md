@@ -14,11 +14,11 @@ While browsing the website, pay attention to the fact that:
 
 - Requests are cached by default and only replayed whenever needed
 
-- Loading and refetching data is possible super easily
+- You can refetch data, and the loading state is handled
 
 - It is server side rendered
 
-- Mutating the store using the editable input fields or the console make react re-render components
+- Mutating the store using the editable input fields or the console triggers a rendering
 
 ### Setup
 
