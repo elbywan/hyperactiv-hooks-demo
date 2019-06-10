@@ -1,20 +1,36 @@
 # Hyperactiv + react = ❤️⚡
 
-## Client + Server demo with SSR
+## Client & Server demo with SSR
 
 ### [📸 Demo](https://hyperactiv-hooks-demo.herokuapp.com/posts)
 
 Hosted demo, with SSR and caching using [hyperactiv/react](https://github.com/elbywan/hyperactiv/tree/master/src/react).
 
-### 1 - Clone
+### What this demo is about
+
+This demo is basically a website mining the [json placeholder api](https://jsonplaceholder.typicode.com).
+
+While browsing the website, pay attention to the fact that:
+
+- Requests are cached by default and only replayed whenever needed
+
+- Loading and refetching data is possible super easily
+
+- It is server side rendered
+
+- Mutating the store using the editable input fields or the console make react re-render components
+
+### Setup
+
+#### 1 - Clone
 
 `git clone https://github.com/elbywan/hyperactiv-hooks-demo`
 
-### 2 - Install
+#### 2 - Install
 
 `pnpm i` or `npm i` or `yarn`
 
-### 3 - Profit
+#### 3 - Profit
 
 - `npm run dev`
 
@@ -28,7 +44,7 @@ Hosted demo, with SSR and caching using [hyperactiv/react](https://github.com/el
 
 *Prod mode, builds then starts the node.js backend that serves optimized HTML & JS using SSR on `http://localhost:5001`*
 
-### 4 - Play with the editable input fields, or the console
+#### 4 - Play with the editable input fields, or the console
 
 ```js
 // The store is bound to window.__STORE__
