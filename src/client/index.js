@@ -8,4 +8,4 @@ import { Root } from '../shared/components/Root'
 
 const HotRoot = hot(module)(Root)
 
-ReactDOM.render(<HotRoot />, document.getElementById('root'))
+ReactDOM.hydrate(<HotRoot />, document.getElementById('root'))

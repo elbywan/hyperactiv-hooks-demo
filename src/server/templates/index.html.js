@@ -12,9 +12,7 @@ export default ({ css = [], js = [], store = '', reactHtml = '' }) => `
     ${js.map(src => `<script src="${src}" defer></script>`).join('')}
 </head>
 <body>
-    <div id="root">
-        ${ reactHtml }
-    </div>
+    <div id="root">${ reactHtml }</div>
 </body>
 </html>
 `
