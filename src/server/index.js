@@ -13,14 +13,15 @@ import pageTemplate from './templates/index.html'
 async function renderPage ({ url }) {
   let store = initStore()
   const jsx = <Root pathname={ url } store={ store }  />
+  let reactHtml = ''
   try {
     await preloadData(jsx)
+    reactHtml = ReactDOMServer.renderToString(jsx)
   } catch(error) {
     /* bad */
     console.error(error)
   }
 
-  const reactHtml = ReactDOMServer.renderToString(jsx)
   return pageTemplate({
     css:  Object.entries(manifest)
       .filter(([ key ]) => key.endsWith('.scss'))

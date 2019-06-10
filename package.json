@@ -19,7 +19,7 @@
   },
   "author": "",
   "license": "ISC",
-  "browserslist": "> 1%, not dead",
+  "browserslist": "> 2%, not dead, not IE > 0",
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.1",
