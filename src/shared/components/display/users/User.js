@@ -75,8 +75,8 @@ export const User = memo(watch(function User({ id, store }) {
                                     onChange={ name => user.company.name = name }
                                 />
                             </div>
+                            <h3>Posts by this user</h3>
                             <Loader loading={!userPosts || userPostsLoading} error={userPostsError}>
-                                <h3>Posts by this user</h3>
                                 <>
                                 {
                                     user.posts && user.posts.map(postId => store.posts[postId]).map(post =>
