@@ -21,14 +21,14 @@ export const Posts = memo(watch(function Posts () {
         <>
             <div className='Posts__buttons-bar'>
                 <Button onClick={() => navigate('/posts/create')}>
-                    + Create
+                    + &nbsp;Create
                 </Button>
                 <Button onClick={refetch}>⟳ Refetch</Button>
                 <Button onClick={() => setPage(p => Math.max(1, p-1))}>
-                    ◀ Previous page
+                    ◀ &nbsp;Previous page
                 </Button>
                 <Button onClick={() => setPage(p => p + 1)}>
-                    ▶ Next page
+                    ▶ &nbsp;Next page
                 </Button>
             </div>
             <div className='view__padded-content'>
