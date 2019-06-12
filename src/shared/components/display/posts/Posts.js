@@ -24,7 +24,7 @@ export const Posts = memo(watch(function Posts () {
                     + &nbsp;Create
                 </Button>
                 <Button onClick={refetch}>⟳ Refetch</Button>
-                <Button onClick={() => setPage(p => Math.max(1, p-1))}>
+                <Button onClick={() => setPage(p => Math.max(1, p-1))} disabled={page < 2}>
                     ◀ &nbsp;Previous page
                 </Button>
                 <Button onClick={() => setPage(p => p + 1)}>
