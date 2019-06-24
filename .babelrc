@@ -9,9 +9,10 @@
     "plugins": [
         ["module-resolver", {
             "alias": {
-              "~": "./src",
-              "react-dom": "@hot-loader/react-dom",
-              "hyperactiv/src/react": "hyperactiv/react"
+                "~": "./src",
+                "react": "preact/compat",
+                "react-dom": "preact/compat",
+                "hyperactiv/src/react": "hyperactiv/react"
             }
         }]
     ]

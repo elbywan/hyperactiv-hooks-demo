@@ -12,7 +12,7 @@
     "watch:client": "parcel watch src/client/index.html -d dist/client --public-url /public/client",
     "watch:server": "parcel watch src/server/index.js --target node --bundle-node-modules -d dist/server",
     "serve": "node --preserve-symlinks dist/server/index.js",
-    "dev": "npm run clean && concurrently --kill-others-on-fail \"npm run watch:client\" \"wait-on ./dist/client/parcel-manifest.json && npm run watch:server\" \"wait-on dist/server/index.js && nodemon --watch dist/server dist/server/index.js\"",
+    "dev": "npm run clean && concurrently --kill-others-on-fail \"npm run watch:client\" \"wait-on ./dist/client/parcel-manifest.json && npm run watch:server\" \"wait-on dist/server/index.js && nodemon --inspect --watch dist/server dist/server/index.js\"",
     "prod": "npm run build && npm run serve",
     "lint": "eslint src",
     "start": "npm run serve"
@@ -23,12 +23,11 @@
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.1",
-    "hyperactiv": "^0.7.2",
+    "hyperactiv": "^0.7.3",
     "node-fetch": "^2.6.0",
     "normaliz": "^0.1.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-hot-loader": "^4.9.0",
+    "preact": "^10.0.0-beta.3",
+    "preact-render-to-string": "^5.0.4",
     "universal-router": "^8.2.0",
     "wretch": "^1.5.2"
   },
@@ -36,7 +35,6 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
-    "@hot-loader/react-dom": "^16.8.6",
     "babel-eslint": "^10.0.1",
     "babel-plugin-module-resolver": "^3.2.0",
     "concurrently": "^4.1.0",
@@ -46,12 +44,14 @@
     "nodemon": "^1.19.1",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-bundle-manifest": "^0.2.0",
+    "parcel-plugin-bundle-visualiser": "git+https://github.com/gregtillbrook/parcel-plugin-bundle-visualiser.git",
     "posthtml-include": "^1.2.0",
     "sass": "^1.20.3",
     "source-map-explorer": "^1.8.0",
     "wait-on": "^3.2.0"
   },
   "alias": {
-    "react-dom": "@hot-loader/react-dom"
+    "react": "preact/compat",
+    "react-dom": "preact/compat"
   }
 }
