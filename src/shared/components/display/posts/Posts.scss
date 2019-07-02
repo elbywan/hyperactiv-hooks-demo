@@ -1,11 +1,15 @@
 .Posts {
     &__buttons-bar {
-        background: $secondaryDimmed;
+        background: white;
+        border-bottom: 1px solid $primary;
         margin: 0;
-        padding: 0.5em;
+        padding: 5px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: start;
+        @media (max-width: 700px) {
+            justify-content: center;
+        }
         button {
             margin: 0.5em;
         }

@@ -1,6 +1,3 @@
-$gradient1: $primary;
-$gradient2: $primaryDimmed;
-
 body {
     margin: 0;
     padding: 0;
@@ -12,8 +9,6 @@ body {
     @media (max-width: 700px) {
         font-size: 0.9rem;
     }
-    background-image: linear-gradient(45deg, $gradient1 25%, $gradient2 25%, $gradient2 50%, $gradient1 50%, $gradient1 75%, $gradient2 75%, $gradient2 100%);
-    background-size: 56.57px 56.57px;
 }
 
 #root {

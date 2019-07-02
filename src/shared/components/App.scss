@@ -3,10 +3,9 @@ header {
     text-align: center;
 
     h2 {
-        color: white;
+        color: #222;
         margin: 0;
         font-size: 3em;
-        background: $primary;
         padding: 0.5em;
     }
 
@@ -16,9 +15,10 @@ header {
         width: 1em;
         transition: all 0.25s;
         margin-left: 0.5em;
+        fill: #222;
 
         &:hover {
-            fill: white;
+            fill: $primary;
         }
     }
 }
@@ -35,18 +35,23 @@ main {
     }
     .content {
         @media (min-width: 950px) {
-            box-shadow: 4px 4px 8px #666;
+            box-shadow: 2px 2px 8px $grey;
         }
         background: white;
     }
     .heading {
         padding: 1em;
         font-size: 1.5em;
-        background: $secondary;
+        background: $primary;
         font-family: 'Raleway', sans-serif;
+        color: white;
+
+        a.link {
+            color: white;
+        }
     }
     .view {
-        border: 3px solid $secondary;
+        border: 1px solid #eee;
         @media (min-width: 950px) {
             border-top: 0;
         }

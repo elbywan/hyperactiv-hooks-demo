@@ -3,19 +3,19 @@ button {
     background: white;
     outline: 0;
     border: none;
-    padding: 0.5em;
+    padding: 5px 10px;
     min-width: 100px;
     box-shadow: none;
     text-align: center;
     border-radius: 0.5em;
     transition: 0.25s background;
-    font-weight: bold;
-    font-size: 1em;
+    font-size: 0.9em;
+    font-family: 'Raleway', sans-serif;
     &:hover:not([disabled]) {
-      background: $secondary;
+      background: $light-grey;
     }
     &[disabled] {
-      background: #EEE;
+      background: $light-grey;
       cursor: not-allowed;
     }
 }
