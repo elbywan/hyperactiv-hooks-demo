@@ -5,5 +5,8 @@ import ReactDOM from 'react-dom'
 
 import { Root } from '../shared/components/Root'
 
-
-ReactDOM.hydrate(<Root />, document.getElementById('root'))
+function render () {
+    ReactDOM.hydrate(<Root />, document.getElementById('root'))
+}
+render ()
+module.hot.accept(render)
